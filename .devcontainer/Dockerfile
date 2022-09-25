@@ -6,7 +6,7 @@ FROM mcr.microsoft.com/vscode/devcontainers/universal:linux as builder
 USER root
 WORKDIR /app
 COPY . ./
-ENV TSFILE=tailscale_1.26.1_amd64.tgz
+ENV TSFILE=tailscale_1.30.2_amd64.tgz
 RUN mkdir -p binaries && \
   wget https://pkgs.tailscale.com/stable/${TSFILE} && \
   tar xzf ${TSFILE} --strip-components=1 -C binaries
